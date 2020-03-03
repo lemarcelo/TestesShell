@@ -10,18 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace TesteShell.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public Page1()
+        public LoginPage()
         {
             InitializeComponent();
-
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            //Shell.Current.Navigation.PushModalAsync(new LoginPage());
-            Shell.Current.GoToAsync("LoginPage");
+            Shell.Current.Navigation.PopModalAsync();
         }
     }
 }

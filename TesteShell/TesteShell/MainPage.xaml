@@ -10,16 +10,16 @@
              Visual="Material">
 
     <FlyoutItem>
-        <ShellContent Title="Home" Icon="home.png" >
-            <paginas:Page1/>
+        <ShellContent Title="Home" Icon="home.png" Route="ContentPage1">
+            <paginas:Page1 />
         </ShellContent>
-        <ShellContent Title="Library" Icon="library.png">
+        <ShellContent Title="Library" Icon="library.png" Route="ContentPage2">
             <paginas:Page2/>
         </ShellContent>
-        <ShellContent Title="Contact" Icon="contact.png">
+        <ShellContent Title="Contact" Icon="contact.png" Route="ContentPage3">
             <paginas:Page3/>
         </ShellContent>
     </FlyoutItem>
-    <ShellContent Title="Item do Menu" Icon="contact.png" Route="Page2"/>
+    <ShellContent  Title="Item do Menu" Icon="contact.png" />
 
 </Shell>
