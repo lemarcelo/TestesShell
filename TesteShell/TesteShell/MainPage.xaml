@@ -9,8 +9,7 @@
              FlyoutHeaderBehavior="CollapseOnScroll"
              Visual="Material">
 
-
-        <FlyoutItem >
+    <FlyoutItem>
         <ShellContent Title="Home" Icon="home.png" >
             <paginas:Page1/>
         </ShellContent>
