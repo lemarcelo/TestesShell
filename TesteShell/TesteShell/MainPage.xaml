@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:paginas="clr-namespace:TesteShell.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TesteShell.MainPage"
+             FlyoutHeaderBehavior="CollapseOnScroll"
+             Visual="Material">
+
+
+        <FlyoutItem >
+        <ShellContent Title="Home" Icon="home.png" >
+            <paginas:Page1/>
+        </ShellContent>
+        <ShellContent Title="Library" Icon="library.png">
+            <paginas:Page2/>
+        </ShellContent>
+        <ShellContent Title="Contact" Icon="contact.png">
+            <paginas:Page3/>
+        </ShellContent>
+    </FlyoutItem>
+    <ShellContent Title="Item do Menu" Icon="contact.png" Route="Page2"/>
+
+</Shell>
