@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using TesteShell.Views;
+using System.Windows.Input;
+using System.Threading.Tasks;
 
 namespace TesteShell
 {
@@ -14,15 +16,22 @@ namespace TesteShell
     [DesignTimeVisible(false)]
     public partial class MainPage : Shell
     {
+        /*Cria o comando utilizado no item do menu lateral e define um método para realizar a navegação para a pagina correspondente*/
+        public ICommand MenuItemCommand => new Command(NavegarMenuItem);
+
+        private async void NavegarMenuItem()
+        {
+            ShellNavigationState AtualContainer = Shell.Current.CurrentState;
+            await Shell.Current.GoToAsync($"{AtualContainer.Location}/MenuItemPage");
+        }
+
         public MainPage()
         {
             InitializeComponent();
-
-            //Routing.RegisterRoute("Page1", typeof(Page1));
-            //Routing.RegisterRoute("Page2", typeof(Page2));
-            //Routing.RegisterRoute("Page3", typeof(Page3));
+            BindingContext = this;
             Routing.RegisterRoute("LoginPage", typeof(LoginPage));
             Routing.RegisterRoute("DestinoPage", typeof(DestinoPage));
+            Routing.RegisterRoute("MenuItemPage", typeof(MenuItemPage));
         }
     }
 }

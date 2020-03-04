@@ -10,16 +10,10 @@
              Visual="Material">
 
     <FlyoutItem>
-        <ShellContent Title="Home" Icon="home.png" Route="ContentPage1">
-            <paginas:Page1 />
-        </ShellContent>
-        <ShellContent Title="Library" Icon="library.png" Route="ContentPage2">
-            <paginas:Page2/>
-        </ShellContent>
-        <ShellContent Title="Contact" Icon="contact.png" Route="ContentPage3">
-            <paginas:Page3/>
-        </ShellContent>
+        <ShellContent Title="Home" Icon="home.png" Route="ContentPage1" ContentTemplate="{DataTemplate paginas:Page1}" />
+        <ShellContent Title="Library" Icon="library.png" Route="ContentPage2" ContentTemplate="{DataTemplate paginas:Page2}" />
+        <ShellContent Title="Contact" Icon="contact.png" Route="ContentPage3" ContentTemplate="{DataTemplate paginas:Page3}" />
     </FlyoutItem>
-    <ShellContent Title="Item do Menu" Icon="contact.png" />
+    <MenuItem Text="Item do Menu" Icon="contact.png" Command="{Binding MenuItemCommand}"/>
 
 </Shell>
