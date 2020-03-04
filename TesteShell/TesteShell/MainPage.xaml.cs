@@ -22,6 +22,7 @@ namespace TesteShell
             //Routing.RegisterRoute("Page2", typeof(Page2));
             //Routing.RegisterRoute("Page3", typeof(Page3));
             Routing.RegisterRoute("LoginPage", typeof(LoginPage));
+            Routing.RegisterRoute("DestinoPage", typeof(DestinoPage));
         }
     }
 }

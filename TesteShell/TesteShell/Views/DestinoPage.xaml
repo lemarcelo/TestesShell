@@ -4,14 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TesteShell.Views.LoginPage">
+             x:Class="TesteShell.Views.DestinoPage"
+             Title="PaginaDestino">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Entry x:Name="entryUsuario" Placeholder="Usuario"/>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Voltar" Clicked="Button_Clicked" />
-                <Button Text="Enviar Usuario" Clicked="Button_Clicked1" />
-            </StackLayout>
+        <StackLayout>
+            <Entry
+                x:Name="EntryDestino"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

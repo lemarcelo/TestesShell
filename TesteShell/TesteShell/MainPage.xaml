@@ -20,6 +20,6 @@
             <paginas:Page3/>
         </ShellContent>
     </FlyoutItem>
-    <ShellContent  Title="Item do Menu" Icon="contact.png" />
+    <ShellContent Title="Item do Menu" Icon="contact.png" />
 
 </Shell>
