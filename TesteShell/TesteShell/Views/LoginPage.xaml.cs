@@ -27,7 +27,6 @@ namespace TesteShell.Views
         {
             text = entryUsuario.Text;
             Shell.Current.GoToAsync($"DestinoPage?entryOrigem={text}");
-
         }
     }
 }

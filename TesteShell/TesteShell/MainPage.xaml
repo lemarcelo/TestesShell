@@ -15,5 +15,6 @@
         <ShellContent Title="Contact" Icon="contact.png" Route="ContentPage3" ContentTemplate="{DataTemplate paginas:Page3}" />
     </FlyoutItem>
     <MenuItem Text="Item do Menu" Icon="contact.png" Command="{Binding MenuItemCommand}"/>
+    <MenuItem Text="Item 2 do Menu" Icon="contact.png" Command="{Binding MenuItem2Command}"/>
 
 </Shell>
