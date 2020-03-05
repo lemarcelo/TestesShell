@@ -18,17 +18,17 @@ namespace TesteShell
     {
         /*Cria o comando utilizado no item do menu lateral e define um método para realizar a navegação para a pagina correspondente*/
         public ICommand MenuItemCommand => new Command(NavegarMenuItem);
-        public ICommand MenuItem2Command => new Command(NavegarMenuItem2);
+        public ICommand LoginPage2Command => new Command(NavegarLoginPage2);
 
         private async void NavegarMenuItem()
         {
             ShellNavigationState AtualContainer = Shell.Current.CurrentState;
             await Shell.Current.GoToAsync($"{AtualContainer.Location}/MenuItemPage");
         }
-        private async void NavegarMenuItem2()
+        private async void NavegarLoginPage2()
         {
             ShellNavigationState AtualContainer = Shell.Current.CurrentState;
-            await Shell.Current.GoToAsync($"{AtualContainer.Location}/MenuItem2Page");
+            await Shell.Current.GoToAsync($"{AtualContainer.Location}/LoginPage2");
         }
 
         public MainPage()
@@ -38,7 +38,8 @@ namespace TesteShell
             Routing.RegisterRoute("LoginPage", typeof(LoginPage));
             Routing.RegisterRoute("DestinoPage", typeof(DestinoPage));
             Routing.RegisterRoute("MenuItemPage", typeof(MenuItemPage));
-            Routing.RegisterRoute("MenuItem2Page", typeof(MenuItem2Page));
+            Routing.RegisterRoute("LoginPage2", typeof(LoginPage2));
+            Routing.RegisterRoute("DestinoPage2", typeof(DestinoPage2));
         }
     }
 }

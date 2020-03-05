@@ -7,10 +7,11 @@
              x:Class="TesteShell.Views.DestinoPage2">
     <ContentPage.Content>
         <StackLayout>
-            <Entry
-                x:Name="EntryDestino"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="Nome"/>
+            <DatePicker x:Name="Data"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Voltar" Clicked="Button_Clicked" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
