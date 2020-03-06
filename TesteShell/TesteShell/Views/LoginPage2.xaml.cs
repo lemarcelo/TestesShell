@@ -13,7 +13,7 @@ namespace TesteShell.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage2 : ContentPage
     {
-        public UsuarioModel UsuarioParam = new UsuarioModel();
+        public UsuarioModel UsuarioP = new UsuarioModel();
         public LoginPage2()
         {
             InitializeComponent();
@@ -21,10 +21,10 @@ namespace TesteShell.Views
 
         private void Button_Clicked1(object sender, EventArgs e)
         {
-            UsuarioParam.Nome = Nome.Text;
-            UsuarioParam.Data = Data.Date;
-            var param = JsonConvert.SerializeObject(UsuarioParam);
-            Shell.Current.GoToAsync($"DestinoPage2?UsuarioParam={param}");
+            UsuarioP.Nome = Nome.Text;
+            UsuarioP.Data = Data.Date;
+            var UsuarioParam = JsonConvert.SerializeObject(UsuarioP);
+            Shell.Current.GoToAsync($"DestinoPage2?UsuarioParam={UsuarioParam}");
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -35,7 +35,6 @@ namespace TesteShell.Views
         {
             base.OnAppearing();
             Shell.Current.FlyoutIsPresented = false;
-
         }
     }
 }

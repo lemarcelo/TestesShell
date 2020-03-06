@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TesteShell.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +14,8 @@ namespace TesteShell.Views
     public partial class LoginPage : ContentPage
     {
         public string text { get; set; }
+
+        UsuarioModel UsuarioM = new UsuarioModel();
         public LoginPage()
         {
             InitializeComponent();
