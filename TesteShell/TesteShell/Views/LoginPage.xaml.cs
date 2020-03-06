@@ -28,5 +28,11 @@ namespace TesteShell.Views
             text = entryUsuario.Text;
             Shell.Current.GoToAsync($"DestinoPage?entryOrigem={text}");
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Shell.Current.FlyoutIsPresented = false;
+
+        }
     }
 }
